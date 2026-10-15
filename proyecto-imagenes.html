@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesador de Imágenes con Hilos | Giovanna Alfaro Sánchez</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- encabezado fijo con nombre telefono y correo -->
+    <header class="encabezado">
+        <div class="contenedor encabezado__contenido">
+            <h1 class="encabezado__nombre">Giovanna Alfaro Sánchez</h1>
+            <div class="encabezado__datos">
+                <a href="tel:+50685361382">Tel: 8536-1382</a>
+                <a href="mailto:giovis.alsan2592@hotmail.com">giovis.alsan2592@hotmail.com</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="contenedor">
+
+        <!-- boton para volver al cv -->
+        <nav class="navegacion">
+            <a class="boton" href="index.html">&larr; Volver al CV</a>
+        </nav>
+
+        <!-- titulo del proyecto -->
+        <section class="seccion">
+            <p class="proyecto__tec">Proyecto 1 de 2</p>
+            <h2 class="titulo-proyecto">Procesador de Imágenes con Hilos</h2>
+            <p class="proyecto__tec">Java, Swing, Threads, JSON | Programación IV (TI-151), CUC | Octubre 2026</p>
+        </section>
+
+        <section class="seccion">
+            <h2>Descripción</h2>
+            <p>
+                Aplicación de escritorio desarrollada en Java que permite cargar una imagen y convertirla a
+                escala de grises usando programación concurrente. La imagen se divide en N regiones y cada
+                región es procesada por un hilo independiente, de modo que varias partes de la imagen se
+                trabajan al mismo tiempo. El sistema también busca patrones dentro de la imagen, los marca
+                en rojo y guarda las estadísticas de cada ejecución en un archivo JSON.
+            </p>
+        </section>
+
+        <section class="seccion">
+            <h2>Objetivo</h2>
+            <p>
+                Aplicar los conceptos de hilos (clase Thread), procesamiento en paralelo y organización por
+                paquetes en una aplicación con interfaz gráfica.
+            </p>
+        </section>
+
+        <section class="seccion">
+            <h2>Funcionalidades</h2>
+            <ul>
+                <li>Menú principal e interfaz gráfica construida con Java Swing.</li>
+                <li>Carga de imágenes en formato JPG, PNG y BMP.</li>
+                <li>Selección de la cantidad de regiones (de 2 a N) y del valor de tonalidad (0 a 255).</li>
+                <li>Filtro de escala de grises aplicado con N hilos en paralelo.</li>
+                <li>Búsqueda de patrones en la imagen con marcado en color rojo.</li>
+                <li>Estadísticas en formato JSON con fecha y hora de cada ejecución.</li>
+                <li>Compilación y ejecución desde consola con javac y java.</li>
+                <li>Scripts de ejecución para Windows (.bat) y Linux (.sh).</li>
+            </ul>
+        </section>
+
+        <section class="seccion">
+            <h2>Estructura del proyecto</h2>
+            <table class="tabla">
+                <thead>
+                    <tr>
+                        <th>Paquete</th>
+                        <th>Responsabilidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>principal</td>
+                        <td>Punto de entrada de la aplicación (método main).</td>
+                    </tr>
+                    <tr>
+                        <td>vista</td>
+                        <td>Ventanas, menú y controles de la interfaz Swing.</td>
+                    </tr>
+                    <tr>
+                        <td>logica</td>
+                        <td>Clases que extienden Thread y procesan cada región de la imagen.</td>
+                    </tr>
+                    <tr>
+                        <td>modelo</td>
+                        <td>Clases de datos: imagen, región y estadísticas.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="seccion">
+            <h2>Lo que aprendí</h2>
+            <p>
+                Dividir un problema en partes independientes para procesarlas en paralelo, coordinar varios
+                hilos hasta que todos terminen y separar la interfaz de la lógica usando paquetes.
+            </p>
+        </section>
+
+        <!-- botones volver al cv y siguiente proyecto -->
+        <nav class="navegacion">
+            <a class="boton" href="index.html">&larr; Volver al CV</a>
+            <a class="boton" href="proyecto-prestamos.html">Siguiente proyecto &rarr;</a>
+        </nav>
+
+    </main>
+
+    <!-- pie con boton para mostrar y ocultar formas de contacto -->
+    <footer class="pie">
+        <div class="contenedor">
+            <button type="button" class="pie__boton" id="btnContacto" aria-expanded="false" aria-controls="bloqueContacto">
+                Formas de contacto
+            </button>
+            <!-- lista oculta hasta dar click -->
+            <ul class="pie__contacto" id="bloqueContacto" hidden>
+                <li><strong>Teléfono:</strong> <a href="tel:+50685361382">8536-1382</a></li>
+                <li><strong>WhatsApp:</strong> <a href="https://wa.me/50685361382" target="_blank" rel="noopener">Enviar mensaje</a></li>
+                <li><strong>Correo electrónico:</strong> <a href="mailto:giovis.alsan2592@hotmail.com">giovis.alsan2592@hotmail.com</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/USUARIO" target="_blank" rel="noopener">github.com/USUARIO</a></li>
+                <li><strong>Ubicación:</strong> Cartago, Costa Rica</li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- archivo que abre y cierra las formas de contacto -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+/* estilos del cv y de los proyectos */
+
+
+/* ---------- general ---------- */
+
+/* quita margenes del navegador */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* letra y colores de la pagina */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #222222;
+    background-color: #ffffff;
+}
+
+/* color de los enlaces */
+a {
+    color: #222222;
+}
+
+/* contenido centrado */
+.contenedor {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/* ---------- encabezado fijo ---------- */
+
+/* encabezado pegado arriba con borde de abajo */
+.encabezado {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #ffffff;
+    border-bottom: 2px solid #222222;
+}
+
+/* nombre a la izquierda y datos a la derecha */
+.encabezado__contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px 24px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.encabezado__nombre {
+    font-size: 1.6rem;
+}
+
+/* telefono y correo en una fila */
+.encabezado__datos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+}
+
+/* enlaces sin subrayado */
+.encabezado__datos a {
+    text-decoration: none;
+}
+
+.encabezado__datos a:hover {
+    text-decoration: underline;
+}
+
+
+/* ---------- secciones del cv ---------- */
+
+/* espacio y borde de abajo de cada seccion */
+.seccion {
+    padding: 22px 0;
+    border-bottom: 1px solid #cccccc;
+}
+
+/* titulos en mayuscula */
+.seccion h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.seccion h3 {
+    font-size: 1.05rem;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+.seccion p {
+    margin-bottom: 8px;
+}
+
+/* espacio de las listas */
+.seccion ul {
+    padding-left: 22px;
+    margin-bottom: 8px;
+}
+
+/* titulo a la izquierda y fecha a la derecha */
+.item__encabezado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 4px 12px;
+}
+
+.item__encabezado h3 {
+    margin-top: 0;
+}
+
+/* textos en gris */
+.item__fecha,
+.item__lugar,
+.proyecto__tec {
+    color: #555555;
+    font-size: 0.95rem;
+}
+
+.item__lugar {
+    font-style: italic;
+}
+
+
+/* ---------- proyectos ---------- */
+
+.proyecto {
+    padding: 14px 0;
+}
+
+/* linea punteada de arriba */
+.proyecto + .proyecto {
+    border-top: 1px dashed #cccccc;
+}
+
+.proyecto h3 {
+    margin-top: 0;
+}
+
+
+/* ---------- botones ---------- */
+
+/* boton blanco con borde negro */
+.boton {
+    display: inline-block;
+    padding: 8px 18px;
+    border: 1px solid #222222;
+    background-color: #ffffff;
+    color: #222222;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+/* boton al pasar el mouse */
+.boton:hover {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+/* botones volver y siguiente */
+.navegacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px 0;
+}
+
+
+/* ---------- paginas de proyecto ---------- */
+
+/* titulo del proyecto */
+.titulo-proyecto {
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+}
+
+/* tabla con bordes */
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 8px;
+}
+
+.tabla th,
+.tabla td {
+    border: 1px solid #cccccc;
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+}
+
+/* fondo gris de los titulos */
+.tabla th {
+    background-color: #f2f2f2;
+}
+
+
+/* ---------- pie de pagina y formas de contacto ---------- */
+
+/* fondo gris y borde de arriba */
+.pie {
+    margin-top: 30px;
+    padding: 24px 0 32px;
+    border-top: 2px solid #222222;
+    background-color: #f7f7f7;
+}
+
+/* boton formas de contacto */
+.pie__boton {
+    padding: 8px 18px;
+    border: 1px solid #222222;
+    background-color: #ffffff;
+    color: #222222;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.pie__boton:hover {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+/* signo mas cuando esta cerrado */
+.pie__boton::after {
+    content: " +";
+}
+
+/* signo menos cuando esta abierto */
+.pie__boton[aria-expanded="true"]::after {
+    content: " -";
+}
+
+/* lista de contactos con borde */
+.pie__contacto {
+    list-style: none;
+    margin-top: 14px;
+    padding: 14px 18px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}
+
+.pie__contacto li {
+    padding: 4px 0;
+}
+
+
+/* ---------- celulares ---------- */
+
+/* letras mas pequenas en celular */
+@media (max-width: 600px) {
+    .encabezado__nombre {
+        font-size: 1.25rem;
+    }
+
+    .encabezado__datos {
+        font-size: 0.9rem;
+    }
+}

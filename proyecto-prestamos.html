@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Préstamos | Giovanna Alfaro Sánchez</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- encabezado fijo con nombre telefono y correo -->
+    <header class="encabezado">
+        <div class="contenedor encabezado__contenido">
+            <h1 class="encabezado__nombre">Giovanna Alfaro Sánchez</h1>
+            <div class="encabezado__datos">
+                <a href="tel:+50685361382">Tel: 8536-1382</a>
+                <a href="mailto:giovis.alsan2592@hotmail.com">giovis.alsan2592@hotmail.com</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="contenedor">
+
+        <!-- boton para volver al cv -->
+        <nav class="navegacion">
+            <a class="boton" href="index.html">&larr; Volver al CV</a>
+        </nav>
+
+        <!-- titulo del proyecto -->
+        <section class="seccion">
+            <p class="proyecto__tec">Proyecto 2 de 2</p>
+            <h2 class="titulo-proyecto">Sistema de Gestión de Préstamos</h2>
+            <p class="proyecto__tec">Python, POO, arquitectura en 3 capas, JSON | Programación III (TI-141), CUC</p>
+        </section>
+
+        <section class="seccion">
+            <h2>Descripción</h2>
+            <p>
+                Sistema desarrollado en Python para administrar préstamos. El programa está organizado en
+                tres capas con responsabilidades separadas: Entidades, Negocio y Datos. La información se
+                guarda en archivos JSON, de modo que los registros se conservan entre una ejecución y otra.
+            </p>
+        </section>
+
+        <section class="seccion">
+            <h2>Objetivo</h2>
+            <p>
+                Aplicar la programación orientada a objetos y la separación por capas para construir un
+                sistema fácil de mantener, donde la lógica del negocio no dependa de la forma en que se
+                almacenan los datos.
+            </p>
+        </section>
+
+        <section class="seccion">
+            <h2>Funcionalidades</h2>
+            <ul>
+                <li>Registro, consulta, modificación y eliminación de préstamos.</li>
+                <li>Validación de los datos antes de guardarlos.</li>
+                <li>Persistencia de la información en archivos JSON.</li>
+                <li>Menú de opciones para la interacción con el usuario.</li>
+            </ul>
+        </section>
+
+        <section class="seccion">
+            <h2>Arquitectura en capas</h2>
+            <table class="tabla">
+                <thead>
+                    <tr>
+                        <th>Capa</th>
+                        <th>Responsabilidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Entidades</td>
+                        <td>Clases que representan los objetos del sistema, con sus atributos, constructores y métodos de acceso.</td>
+                    </tr>
+                    <tr>
+                        <td>Negocio</td>
+                        <td>Reglas y validaciones. Recibe las solicitudes del menú y decide qué hacer con los datos.</td>
+                    </tr>
+                    <tr>
+                        <td>Datos</td>
+                        <td>Lectura y escritura de los archivos JSON. Es la única capa que sabe dónde se guarda la información.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="seccion">
+            <h2>Lo que aprendí</h2>
+            <p>
+                Separar responsabilidades entre capas, diseñar clases a partir de un diagrama de clases y
+                documentar la estructura de los archivos JSON utilizados por el sistema.
+            </p>
+        </section>
+
+        <!-- botones volver al cv y proyecto anterior -->
+        <nav class="navegacion">
+            <a class="boton" href="index.html">&larr; Volver al CV</a>
+            <a class="boton" href="proyecto-imagenes.html">&larr; Proyecto anterior</a>
+        </nav>
+
+    </main>
+
+    <!-- pie con boton para mostrar y ocultar formas de contacto -->
+    <footer class="pie">
+        <div class="contenedor">
+            <button type="button" class="pie__boton" id="btnContacto" aria-expanded="false" aria-controls="bloqueContacto">
+                Formas de contacto
+            </button>
+            <!-- lista oculta hasta dar click -->
+            <ul class="pie__contacto" id="bloqueContacto" hidden>
+                <li><strong>Teléfono:</strong> <a href="tel:+50685361382">8536-1382</a></li>
+                <li><strong>WhatsApp:</strong> <a href="https://wa.me/50685361382" target="_blank" rel="noopener">Enviar mensaje</a></li>
+                <li><strong>Correo electrónico:</strong> <a href="mailto:giovis.alsan2592@hotmail.com">giovis.alsan2592@hotmail.com</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/USUARIO" target="_blank" rel="noopener">github.com/USUARIO</a></li>
+                <li><strong>Ubicación:</strong> Cartago, Costa Rica</li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- archivo que abre y cierra las formas de contacto -->
+    <script src="js/main.js"></script>
+</body>
+</html>

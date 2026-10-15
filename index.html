@@ -1,0 +1,144 @@
+<<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giovanna Alfaro Sánchez | Curriculum Vitae</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- encabezado fijo con nombre telefono y correo -->
+    <header class="encabezado">
+        <div class="contenedor encabezado__contenido">
+            <h1 class="encabezado__nombre">Giovanna Alfaro Sánchez</h1>
+            <div class="encabezado__datos">
+                <a href="tel:+50685361382">Tel: 8536-1382</a>
+                <a href="mailto:giovis.alsan2592@hotmail.com">giovis.alsan2592@hotmail.com</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="contenedor">
+
+        <!-- perfil -->
+        <section class="seccion" id="perfil">
+            <h2>Perfil profesional</h2>
+            <p>
+                Estudiante de Tecnologías de la Información en el Colegio Universitario de Cartago, con interés
+                en desarrollo de software y análisis de datos. Desarrollo aplicaciones en Java, Python y C#
+                aplicando programación orientada a objetos, arquitectura en capas y bases de datos SQL y MongoDB.
+                Documento requerimientos con casos de uso UML y ERS. Busco una pasantía o puesto junior donde
+                aportar en desarrollo, datos o análisis de sistemas.
+            </p>
+        </section>
+
+        <!-- estudios y certificaciones -->
+        <section class="seccion" id="estudios">
+            <h2>Estudios</h2>
+            <div class="item">
+                <div class="item__encabezado">
+                    <h3>Diplomado en Tecnologías de la Información</h3>
+                    <span class="item__fecha">En curso</span>
+                </div>
+                <p class="item__lugar">Colegio Universitario de Cartago (CUC), Cartago, Costa Rica</p>
+                <p>Cursos relevantes: Programación III y IV, Ingeniería del Software II, Análisis de Sistemas de Información, Probabilidad y Estadística, Contabilidad.</p>
+            </div>
+
+            <h3>Certificaciones</h3>
+            <ul>
+                <li>CCNA: Introduction to Networks (ITN), Cisco Networking Academy.</li>
+            </ul>
+        </section>
+
+        <!-- proyectos, los dos primeros abren su propia pagina -->
+        <section class="seccion" id="proyectos">
+            <h2>Proyectos académicos</h2>
+
+            <div class="proyecto">
+                <h3>Procesador de Imágenes con Hilos</h3>
+                <p class="proyecto__tec">Java, Swing, Threads, JSON</p>
+                <p>
+                    Aplicación de escritorio que convierte imágenes a escala de grises dividiéndolas en N regiones
+                    procesadas en paralelo por hilos independientes. Incluye búsqueda de patrones con marcado
+                    en rojo y registro de estadísticas en JSON.
+                </p>
+                <a class="boton" href="proyecto-imagenes.html">Ver proyecto</a>
+            </div>
+
+            <div class="proyecto">
+                <h3>Sistema de Gestión de Préstamos</h3>
+                <p class="proyecto__tec">Python, POO, arquitectura en 3 capas, JSON</p>
+                <p>
+                    Sistema para registrar y administrar préstamos, organizado en las capas Entidades, Negocio
+                    y Datos, con persistencia en archivos JSON.
+                </p>
+                <a class="boton" href="proyecto-prestamos.html">Ver proyecto</a>
+            </div>
+
+            <div class="proyecto">
+                <h3>Especificación de Requerimientos: Sistema de Gestión de Citas Médicas</h3>
+                <p class="proyecto__tec">UML, casos de uso, ERS IEEE 830, trabajo en equipo</p>
+                <p>
+                    Documento de Especificación de Requerimientos de Software para una clínica, con diagramas
+                    de casos de uso, actores y requerimientos funcionales y no funcionales.
+                </p>
+            </div>
+
+            <div class="proyecto">
+                <h3>Comunicación Cliente-Servidor con Sockets</h3>
+                <p class="proyecto__tec">Python, sockets, redes</p>
+                <p>
+                    Aplicaciones cliente-servidor que intercambian mensajes por red: consulta de fecha y hora,
+                    juego de adivinanza y calculadora remota.
+                </p>
+            </div>
+        </section>
+
+      
+
+        <!-- habilidades -->
+        <section class="seccion" id="habilidades">
+            <h2>Habilidades desarrolladas</h2>
+            <ul>
+                <li><strong>Desarrollo:</strong> programación orientada a objetos (POO), arquitectura en capas, hilos (threading), sockets, persistencia en JSON, interfaces gráficas con Java Swing.</li>
+                <li><strong>Bases de datos:</strong> SQL, SQL Server, MySQL, MongoDB.</li>
+                <li><strong>Análisis de sistemas:</strong> levantamiento de requerimientos, UML, casos de uso, ERS (IEEE 830).</li>
+                <li><strong>Datos:</strong> Power BI, Excel, estadística descriptiva.</li>
+                <li><strong>Herramientas:</strong> Visual Studio Code, Visual Studio 2022, Git, GitHub.</li>
+                <li><strong>Personales:</strong> responsabilidad, organización, servicio al cliente y trabajo en equipo.</li>
+            </ul>
+        </section>
+
+        <!-- lenguajes e idiomas -->
+        <section class="seccion" id="lenguajes">
+            <h2>Lenguajes que manejo</h2>
+            <p><strong>Programación:</strong> Java, Python, C#, SQL, JavaScript, HTML, CSS.</p>
+            <p><strong>Idiomas:</strong> Español (nativo), Inglés (intermedio, en curso).</p>
+        </section>
+
+    </main>
+
+    <!-- pie con boton para mostrar y ocultar formas de contacto -->
+    <footer class="pie">
+        <div class="contenedor">
+            <button type="button" class="pie__boton" id="btnContacto" aria-expanded="false" aria-controls="bloqueContacto">
+                Formas de contacto
+            </button>
+            <!-- lista oculta hasta dar click -->
+            <ul class="pie__contacto" id="bloqueContacto" hidden>
+                <li><strong>Teléfono:</strong> <a href="tel:+50685361382">8536-1382</a></li>
+                <li><strong>WhatsApp:</strong> <a href="https://wa.me/50685361382" target="_blank" rel="noopener">Enviar mensaje</a></li>
+                <li><strong>Correo electrónico:</strong> <a href="mailto:giovis.alsan2592@hotmail.com">giovis.alsan2592@hotmail.com</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/USUARIO" target="_blank" rel="noopener">github.com/USUARIO</a></li>
+                <li><strong>Ubicación:</strong> Cartago, Costa Rica</li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- archivo que abre y cierra las formas de contacto -->
+    <script src="js/main.js"></script>
+</body>
+</html>
+</body>
+</html>
